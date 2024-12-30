@@ -1,101 +1,37 @@
 import Image from "next/image";
 
+export const metadata = {
+  title: "Welcome",
+  description: "A simple and stylish dashboard made with Next.js, showing data and easy-to-use features.",
+};
+
+
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="bg-bgImage bg-cover bg-center min-h-screen"> {/* BG IMAGE */}
+      <div className="min-h-screen bg-black bg-opacity-40"> {/* BLACK OVERLAY */} 
+        {/* SOCIAL MEDIA CONTAINER */}
+        <div className="p-10 w-1/3 mb-10"> 
+          <p className="text-white font-bold pb-3 pl-3"><u>Social Media:</u></p>
+          {/* SOCIAL MEDIA ICONS */}
+          <div className="flex align-center"> 
+            <a href="https://github.com/Eyu-Gen" className="w-fit mr-3"><Image src="/github-icon.png" alt="Github-Logo" width={50} height={50} /></a>
+            <a href="https://www.instagram.com/u.can.0_0/" className="w-fit mr-3"><Image src="/instagram-icon.png" alt="Instagram-Logo" width={50} height={50} /></a>
+            <a href="https://www.facebook.com/EyuGen10" className="w-fit mr-3"><Image src="/facebook-icon.png" alt="Facebook-Logo" width={50} height={50} /></a>
+            <a href="https://www.linkedin.com/in/yugin-paudel/" className="w-fit mr-3"><Image src="/linkedin-icon.png" alt="LinkedIn-Logo" width={50} height={50} /></a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        {/* DETAILS CONTAINER */}
+        <div className="w-screen flex justify-center">
+          {/* DETAILS */}
+          <div className="w-2/3 m-5 flex flex-col items-center justify-center">
+            <h1 className="text-5xl font-bold text-white text-center mb-5">WELCOME TO DASHBOARD</h1>
+            <p className="text-white text-center font-sans mb-10">Hey there! Ready to take control of your work? Log in and let’s make productivity happen!</p>
+            <button className="w-40 p-3 rounded-full bg-white font-bold text-black hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out">LOG IN</button>
+          </div>
+        </div>
+      </div>
+    </main>
   );
 }
