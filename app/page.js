@@ -1,4 +1,5 @@
 import Image from "next/image";
+import LoginButton from "./buttons";
 import { Kanit, Playwrite_AU_SA } from 'next/font/google';
 
 // Initialize fonts
@@ -39,7 +40,7 @@ export default function Home() {
           <div className="w-2/3 m-5 flex flex-col items-center justify-center">
             <h1 className={`text-2xl w-screen sm:text-5xl font-bold text-white text-center mb-5 ${kanit.className}`}>WELCOME TO DASHBOARD</h1>
             <p className={`text-xs sm:text-xl text-white text-center font-sans mb-10 ${playwriteAU.className}`}>Hey there! Ready to take control of your work? Log in and let’s make productivity happen!</p>
-            <button className="w-40 p-3 rounded-full bg-white font-bold text-black hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out">LOG IN</button>
+            <LoginButton />
           </div>
         </div>
       </div>

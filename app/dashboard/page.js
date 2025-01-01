@@ -1,7 +1,6 @@
 import React from 'react'
-import Image from "next/image";
 import { Kanit, Playwrite_AU_SA } from 'next/font/google';
-import SideNav from '@/app/dashboard/layout';
+import SideBar from '@/app/dashboard/layout';
 
 // Initialize fonts
 const kanit = Kanit({
@@ -21,7 +20,9 @@ export const metadata = {
 
 const page = () => {
   return (
-    <SideNav />
+    <>
+    <p className='text-9xl text-white'>HELLO! THIS IS HOME PAGE. WORK IN PROGRESS...</p>
+    </>
   )
 }
 
