@@ -10,6 +10,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primaryColor: "var(--primaryColor)",
+        secondaryColor: "var(--secondaryColor)",
       },
 
       backgroundImage: {
