@@ -28,10 +28,10 @@ const SideNav = () => {
     const pathName = usePathname();
 
     return (
-    <div className='w-full pr-5 pl-5'>
+    <div className='w-full pr-5 pl-5 bg-primaryColor'>
         {links.map((link) => (
             <Link key={link.id} href={link.href || "/"} className="text-white">
-                <div className={`${kanit.className} p-3 w-full flex flex-col items-center ${pathName.includes(link.name) ? "bg-primaryColor text-black rounded" : "bg-secondaryColor text-white"}`}>
+                <div className={`${kanit.className} p-3 w-full flex flex-col items-center ${pathName.includes(link.name) ? "bg-white text-black rounded" : "bg-primaryColor text-white"}`}>
                     {link.name}
                 </div>
             </Link>

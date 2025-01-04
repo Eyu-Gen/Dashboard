@@ -16,7 +16,7 @@ const kanit = Kanit({
 export default function SideBar({children}) {
     return (
         <div className='flex'>
-        <aside className='bg-secondaryColor relative hidden lg:w-1/5 lg:flex lg:flex-col lg:items-center h-screen'> {/*SIDE-BAR*/}
+        <aside className='bg-primaryColor relative hidden lg:w-1/5 lg:flex lg:flex-col lg:items-center h-screen'> {/*SIDE-BAR*/}
             {/*LOGO*/}
             <div className='w-fit rounded-full mt-10 mb-5'>
                 <Image className='object-contain rounded-full' src="/logo.jpg" alt="Logo" width={100} height={100} />
@@ -34,7 +34,7 @@ export default function SideBar({children}) {
         </aside>
 
         {/* CONTENT AREA */}
-        <main className="w-full lg:w-4/5 p-10">{children}</main>
+        <main className="w-full lg:w-4/5 p-10 bg-white text-black">{children}</main>
 
         </div>
   );

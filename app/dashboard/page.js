@@ -21,7 +21,7 @@ export const metadata = {
 const page = () => {
   return (
     <>
-    <p className='text-9xl text-white'>HELLO! THIS IS HOME PAGE. WORK IN PROGRESS...</p>
+    <p className='text-9xl'>HELLO! THIS IS HOME PAGE. WORK IN PROGRESS...</p>
     </>
   )
 }
