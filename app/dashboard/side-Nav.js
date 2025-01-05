@@ -42,11 +42,27 @@ const SideNav = () => {
 }
 
 const MenuContainer = () => {
-  const [menuContainer, setMenuContainer] = useState(false);
+  const [menuVisible, setMenuVisible] = useState(false);
 
-  setMenuContainer = (value) => {
-    value===true ? <SideBar /> : setMenuContainer(false);
-  };
-}
+  return (
+    <>
+      {/* Menu Icon */}
+      <div className="block md:hidden" onClick={() => setMenuVisible((true))}>
+        <img src="/menu-icon.png" alt="menu-icon" width={50} height={50} className="cursor-pointer"/>
+      </div>
+
+      {/* Sidebar */}
+      {menuVisible && ( 
+        <div className="fixed top-0 left-0 w-4/5 h-full bg-primaryColor z-50 shadow-lg">
+          <button className="absolute top-5 right-5 text-white" onClick={() => setMenuVisible(false)}>
+            Close
+          </button>
+          <SideNav />
+        </div>
+      )}
+    </>
+  );
+};
+
 
 export { SideNav, MenuContainer };
