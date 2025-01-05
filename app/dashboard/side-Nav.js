@@ -1,9 +1,10 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
-import { useState } from 'react';
 import { Kanit, Playwrite_AU_SA } from 'next/font/google';
 import { usePathname } from 'next/navigation';
+import { useState } from 'next/navigation';
+import SideBar from '@/app/dashboard/layout';
 
 const kanit = Kanit({
     subsets: ['latin'],
@@ -31,7 +32,7 @@ const SideNav = () => {
     <div className='w-full pr-5 pl-5 bg-primaryColor'>
         {links.map((link) => (
             <Link key={link.id} href={link.href || "/"} className="text-white">
-                <div className={`${kanit.className} p-3 w-full flex flex-col items-center ${pathName.includes(link.name) ? "bg-white text-black rounded" : "bg-primaryColor text-white"}`}>
+                <div className={`${kanit.className} p-3 w-full flex flex-col items-center ${pathName===link.href ? "text-black rounded bg-white" : "bg-primaryColor text-white"}`}>
                     {link.name}
                 </div>
             </Link>
@@ -40,4 +41,12 @@ const SideNav = () => {
   )
 }
 
-export default SideNav;
+const MenuContainer = () => {
+  const [menuContainer, setMenuContainer] = useState(false);
+
+  setMenuContainer = (value) => {
+    value===true ? <SideBar /> : setMenuContainer(false);
+  };
+}
+
+export { SideNav, MenuContainer };

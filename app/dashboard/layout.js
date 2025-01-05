@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';   
-import SideNav from '@/app/dashboard/side-Nav';
+import { SideNav } from './side-Nav';
 import { Kanit, Playwrite_AU_SA } from 'next/font/google';
 
 const kanit = Kanit({
@@ -34,7 +34,7 @@ export default function SideBar({children}) {
         </aside>
 
         {/* CONTENT AREA */}
-        <main className="w-full lg:w-4/5 p-10 bg-white text-black">{children}</main>
+        <main className="w-full lg:w-4/5 p-5 md:p-10 md:pl-20 bg-white text-black">{children}</main>
 
         </div>
   );
