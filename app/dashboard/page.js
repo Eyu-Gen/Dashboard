@@ -25,6 +25,7 @@ const page = () => {
     <>
       <div className='flex flex-row items-center justify-between mb-5 md:mb-10'>
         <h1 className='text-sm md:text-xl font-bold md:mb-5 text-primaryColor'>Dashboard || Home</h1>
+        {/*Error in responsive*/}
         <MenuContainer />
       </div>
 
