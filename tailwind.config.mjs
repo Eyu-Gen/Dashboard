@@ -17,6 +17,11 @@ export default {
       backgroundImage: {
         bgImage: "url('/bg-image.jpg')",
       },
+
+      fontFamily: {
+        kanit: "var(--font-kanit)",
+        playwriteAU: "var(--font-playwriteAU)",
+      },
     },
   },
   plugins: [],
